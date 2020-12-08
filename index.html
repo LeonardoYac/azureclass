@@ -4,14 +4,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/b38311388a.js" crossorigin="anonymous"></script>
+    
+
 </head>
 
-<body>
+<!-- <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
   </main>
 </body>
+-->
+
+<body>
+  <header class="header" id="idHeader">
+      <div class="container logo-nav-container">
+          <div class="containerLogo">
+              <img src="img/logo.png" class="imgLogo">
+              <a href="javascript:miTab1()" class="logo">
+                &nbsp;Multiservicios EM&nbsp;
+              </a>
+          </div>                           
+          
+          <label class="labelIcon" for="btn_check"><i class="fas fa-bars"></i></label>
+          <input type="checkbox" id="btn_check">
+          
+          <nav class="navigation" id="navit">
+              <ul class="tabs">
+                  <li><a href="javascript:miTab1()">INICIO</a></li>
+                  <li><a href="javascript:miTab2()">ACERCA DE</a></li>
+                  <li><a href="javascript:miTab3()">SERVICIOS</a></li>
+                  <li><a href="javascript:miTab4()" id="navContact">CONTACTO</a></li>
+                  <!-- <li><a href="javascript:miTab5()">Our Staff</a></li> --> 
+                  <li><a href="javascript:miTab6()">PAGO</a></li>
+              </ul>
+          </nav>
+          
+
+          <div>
+              <!-- <a href="javascript:miTab1()" class="logo_li"><span style="color:#dc554e;">License #P1189064</a> --> 
+          </div>
+      </div>
+  </header>
+
+  <div class="secciones">
+
+      <article class="miTab1" id="tab1">
+          <div class="container">
+              <div class="div-img hidden" >
+                <img class="img" src="img/portada.jpg" title="" alt="">
+              </div>
+          </div>
+            
+          <section class="dos">
+              <div class="dosTodo">
+                  <div>
+                      <h1 style="line-height:1.3em;text-align:center;font-size:18px">
+                          <span style="color:#dc554e;">
+                              <span style="letter-spacing:0.05em">CUANDO LOS RESULTADOS&nbsp;</span>
+                          </span>
+                      </h1>
+                  </div>                
+                  <div style="margin-top: -40px;">
+                      <h2 style="line-height:0.8em;text-align:center;font-size:60px; font-weight: bold;font-family: raleway,sans-serif;">
+                          <span style="color:#dc554e;">IMPORTAN</span>
+                      </h2>
+                  </div>
+              </div>                               
+          </section>
+
+           <section class="tres">
+              <div style="background: #D1E0EB;">
+                  <!-- <p>"Your text its need it here"</p> --> 
+              </div>
+              <!-- <div class="home_services">
+                  <p>SERVICES</p>
+                  <ul>
+                      <li>Insurance Claims Investigations</li>
+                      <li>Property, Auto and Liability Claims Adjusting</li>
+                      <li>Trial Preparation</li>
+                      <li>Data Base Searches</li>
+                      <li>Process Service</li>
+                      <li>Staff Attorney</li>
+                      <li>... and more</li>
+                  </ul>
+                  <input class="btn_moreInfo" type="button" onclick="miTab3()" value="More Info">
+              </div> -->
+          </section>
+
+          <section class="cuatro">
+              <div class="home_aboutUs">
+                  <p style="font-family: raleway, sans-serif; font-size: 60px; padding-top: 30px;">ACERCA DE NOSOTROS</p>
+                  <p>Llega para ti una nueva alternativa sobre múltiples servicios que ponemos a tu disposición: <br>
+                    Desde una tutoría para salvar el año o el semestre, la creación y edición de videos y música para tus fiestas, <br>
+                    hasta reparacio o instalacion de distinas equipos electricos y electronicos!</p>
+                  <br>
+                  <input class="btn_readInfo" type="button" onclick="miTab2()" value="Ver mas">
+              </div>
+              
+              
+          </section>
+
+          <section class="cinco" id="idContact">
+                  <div class="home_contact" id="idContactUs">
+                      <div class="contac"><p>CONTACTANOS</p></div>
+                      
+                      <div class="containerContacUs">
+                          <div class="miFrame">
+                              <iframe class="miSrc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61782.53426184973!2d-90.59076799534606!3d14.575789910743994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a13f0d32f33b%3A0x2fb636d4ae799349!2sZona%2012%2C%20Cdad.%20de%20Guatemala!5e0!3m2!1ses!2sgt!4v1607459868938!5m2!1ses!2sgt" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                              <div style="color: #dc554e;"><b>Avenida Petapa zona 12</b></div>
+                          </div>
+
+                          <div class="datos">
+                              <p>Cel:(502) 3072-2200 <br> Correo: infops502@gmail.com</p>
+                              <p>Contacto 24 horas al día, 7 días a la semana</p>
+      
+                              <br>
+      
+                              <div class="miForm">
+                                  <form action="correo.php" method="post">
+                                      <label for="">Ingrese su Nombre<span style="color: #dc554e; font-size: 13px;">✹</span></label><br>
+                                      <input type="text" name="name" id="name" placeholder="Nombre" required="required" autocomplete="off"><br>
+              
+                                      <label for="">Ingrese su Email<span style="color: #dc554e; font-size: 13px;">✹</span></label><br>
+                                      <input type="email" name="email" id="email" placeholder="Email" required="required" autocomplete="off"><br>
+              
+                                      <label for="">Ingrese el Asunto<span style="color: #dc554e; font-size: 13px;">✹</span></label><br>
+                                      <input type="text" name="subject" id="subject" placeholder="Asunto" required="required" autocomplete="off"><br>
+              
+                                      <label for="">Envianos un mensaje</label><br>
+                                      <textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..." autocomplete="off"></textarea><br><br>
+              
+                                      <button type="submit" id="miBtn" name="enviar">Enviar</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                      
+  
+                  </div>
+          </section>
+      </article>
+
+      <article class="miTab2" id="tab2">
+          <div class="tab2_about"><p>ACERCA DE</p></div>
+          
+          <div class="tab2_contenido_padre">
+              <div class="tab2_contenido">
+                  <p style="font-size: 25px; margin-top: 10px;"><b>MULTISERVICIOS EM </b></p>
+                  <p>
+                    Déjame decirte que Multiservicios EM es un emprendimiento con miras de crear una relación servidor - cliente de calidad 🤩. 
+                    Con motivo de llevar a cabo un proyecto que comenzó con una idea en mente, prestamos servicios múltiples, 
+                    excelentes precios; pues buscamos principalmente apoyar a todos nuestros amigos (clientes) 🤠, 
+                    y no dudes en preguntar todas tus dudas sobre precios y demás, te gustará!! 😊
+                  </p> <br><br>
+              </div>
+          </div>
+      
+      </article>
+
+      <article class="miTab3" id="tab3">
+          <div class="tab3_services">
+              <p>SERVICIOS</p>                
+          </div>
+
+          <div class="tab3_final">
+              <p style="color: #0c3c60;">Resultados inmediatos</p>
+          </div>
+
+          <div class="tab3_contenido">
+              <div class="tab3_contenidoUno">
+                  <ul>
+                      <li>Diagnósticos y Reparaciones</li>
+                      <li>Instalaciones Eléctricas</li>
+                      <li>Tutorías</li>
+                      <li>Asesoría de Proyectos Eléctricos</li>
+                      <li>Edición de Música y Video</li>
+                      <li>Asesorías Diversas y Otros</li>
+                  </ul>
+              </div>
+          </div>        
+
+          <div class="tab3_final">
+              <p>
+              Dependiendo del tipo de servicios que se necesiten resultará en la tarifa de facturación. <br> 
+              Ofrecemos facturación de tarifa plana, así como tarifas por hora que difieren de un caso a otro.<br><br>
+              </p>
+          </div>
+      </article>
+
+      <article class="miTab6" id="tab6">
+          <div class="tab6_pay"><p>Metodo de Pago</p></div>
+          
+          <div class="tab6_padre">
+              <div class="tab6_contenido">
+                  <p>
+                    Gracias por elegirnos
+                  </p> <br>
+              </div>       
+              
+              <div class="tab6_contenido">
+                <div id="smart-button-container">
+                  <div style="text-align: center"><label for="description">Descripción  </label><input type="text" name="descriptionInput" id="description" maxlength="127" value=""></div>
+                    <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+                  <div style="text-align: center"><label for="amount">Total a pagar </label><input name="amountInput" type="number" id="amount" value="" ><span> USD</span></div>
+                    <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                  <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+                    <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+                  <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+                </div>
+
+                <script src="https://www.paypal.com/sdk/js?client-id=AUN40NwfOealpz_vYtHHPkJu5zwqc5AYlBTNyBxz6fs7TuQALP2MWECWl6c-pmwuMaI4vpzsZ1up06no&currency=USD" data-sdk-integration-source="button-factory"></script>
+                
+                <script>
+                  function initPayPalButton() {
+                    var description = document.querySelector('#smart-button-container #description');
+                    var amount = document.querySelector('#smart-button-container #amount');
+                    var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+                    var priceError = document.querySelector('#smart-button-container #priceLabelError');
+                    var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+                    var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+                    var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+                
+                    var elArr = [description, amount];
+                
+                    if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+                      invoiceidDiv.style.display = "block";
+                    }
+                
+                    var purchase_units = [];
+                    purchase_units[0] = {};
+                    purchase_units[0].amount = {};
+                
+                    function validate(event) {
+                      return event.value.length > 0;
+                    }
+                
+                    paypal.Buttons({
+                      style: {
+                        color: 'gold',
+                        shape: 'pill',
+                        label: 'pay',
+                        layout: 'vertical',
+                        
+                      },
+                
+                      onInit: function (data, actions) {
+                        actions.disable();
+                
+                        if(invoiceidDiv.style.display === "block") {
+                          elArr.push(invoiceid);
+                        }
+                
+                        elArr.forEach(function (item) {
+                          item.addEventListener('keyup', function (event) {
+                            var result = elArr.every(validate);
+                            if (result) {
+                              actions.enable();
+                            } else {
+                              actions.disable();
+                            }
+                          });
+                        });
+                      },
+                
+                      onClick: function () {
+                        if (description.value.length < 1) {
+                          descriptionError.style.visibility = "visible";
+                        } else {
+                          descriptionError.style.visibility = "hidden";
+                        }
+                
+                        if (amount.value.length < 1) {
+                          priceError.style.visibility = "visible";
+                        } else {
+                          priceError.style.visibility = "hidden";
+                        }
+                
+                        if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+                          invoiceidError.style.visibility = "visible";
+                        } else {
+                          invoiceidError.style.visibility = "hidden";
+                        }
+                
+                        purchase_units[0].description = description.value;
+                        purchase_units[0].amount.value = amount.value;
+                
+                        if(invoiceid.value !== '') {
+                          purchase_units[0].invoice_id = invoiceid.value;
+                        }
+                      },
+                
+                      createOrder: function (data, actions) {
+                        return actions.order.create({
+                          purchase_units: purchase_units,
+                        });
+                      },
+                
+                      onApprove: function (data, actions) {
+                        return actions.order.capture().then(function (details) {
+                          alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                        });
+                      },
+                
+                      onError: function (err) {
+                        console.log(err);
+                      }
+                    }).render('#paypal-button-container');
+                  }
+                  initPayPalButton();
+                </script>
+                           
+              </div>
+
+          </div>
+      </article>
+
+  </div>
+
+  <footer class="footer">
+      <div class="contanier">
+           Multiservicios EM © 2020 <br>
+           Desarrollado por AYAC ENTERPRISE Inc. © 2020 Todos los derechos reservados     
+      </div>
+  </footer>
+
+</body>
+
 
 </html>
